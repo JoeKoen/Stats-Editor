@@ -1,0 +1,2 @@
+C:\Users\Cyber\AppData\Local\Temporary Projects\Stats Editor\bin\Debug\Stats Editor.exe.config
+C:\Users\Cyber\Documents\GitHub\Stats-Editor\Stats Editor\Stats Editor\bin\Debug\Stats Editor.exe.config

@@ -42,6 +42,7 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(676, 98)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Place Holder"
         Me.ResumeLayout(False)
         Me.PerformLayout()

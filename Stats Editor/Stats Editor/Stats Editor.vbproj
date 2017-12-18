@@ -23,14 +23,14 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>false</MapFileExtensions>
-    <InstallUrl>https://mydev.center/apps/vbapps/stat-editor/</InstallUrl>
-    <UpdateUrl>https://mydev.center/apps/vbapps/stat-editor/</UpdateUrl>
+    <InstallUrl>http://mydev.center/apps/statseditor/</InstallUrl>
+    <UpdateUrl>http://mydev.center/apps/statseditor/</UpdateUrl>
     <ProductName>Stats Editor</ProductName>
     <PublisherName>Cyber%27s Custom Apps</PublisherName>
     <SuiteName>Stats Editor Alpha</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.php</WebPage>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>5</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>

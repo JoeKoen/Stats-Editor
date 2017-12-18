@@ -31,15 +31,15 @@ Partial Class Form1
         Me.Label1.Font = New System.Drawing.Font("Segoe Marker", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(643, 74)
+        Me.Label1.Size = New System.Drawing.Size(643, 148)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "This is just a place holder"
+        Me.Label1.Text = "This is just a place holder" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "or is it?"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(676, 98)
+        Me.ClientSize = New System.Drawing.Size(676, 178)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

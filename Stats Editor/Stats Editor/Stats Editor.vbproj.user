@@ -2,7 +2,7 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <PublishUrlHistory>C:\Users\Cyber\Documents\GitHub\Stats-Editor\Published\|publish\</PublishUrlHistory>
-    <InstallUrlHistory>https://mydev.center/apps/vbapps/stat-editor/</InstallUrlHistory>
+    <InstallUrlHistory>http://mydev.center/apps/statseditor/|https://mydev.center/apps/vbapps/stat-editor/</InstallUrlHistory>
     <SupportUrlHistory />
     <UpdateUrlHistory>https://mydev.center/apps/vbapps/stat-editor/</UpdateUrlHistory>
     <BootstrapperUrlHistory />

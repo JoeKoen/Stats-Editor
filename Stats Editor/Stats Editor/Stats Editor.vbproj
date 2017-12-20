@@ -28,15 +28,16 @@
     <ProductName>Stats Editor</ProductName>
     <PublisherName>Cyber%27s Custom Apps</PublisherName>
     <SuiteName>Stats Editor Alpha</SuiteName>
-    <MinimumRequiredVersion>1.0.23.1</MinimumRequiredVersion>
+    <MinimumRequiredVersion>1.0.25.0</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.php</WebPage>
-    <ApplicationRevision>2</ApplicationRevision>
-    <ApplicationVersion>1.0.23.%2a</ApplicationVersion>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.25.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -185,6 +186,7 @@
     <None Include="Resources\airborneelite_CustomImg.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="index_Tl6_icon.ico" />
     <Content Include="Reader.txt" />
     <None Include="Resources\index_Tl6_icon.ico" />
     <None Include="Resources\index.png" />
@@ -194,6 +196,14 @@
     <None Include="Resources\airborneelite_CustomImg_green.png" />
     <None Include="Resources\airborneelite_CustomImg_brown.png" />
     <None Include="Resources\airborneelite_CustomImg_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <FileAssociation Include=".sef">
+      <Visible>False</Visible>
+      <Description>Stats Editor File</Description>
+      <Progid>StatEditor</Progid>
+      <DefaultIcon>Resources\index_Tl6_icon.ico</DefaultIcon>
+    </FileAssociation>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

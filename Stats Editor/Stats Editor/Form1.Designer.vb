@@ -64,12 +64,13 @@ Partial Class Form1
         Me.lstxt3 = New System.Windows.Forms.TextBox()
         Me.lstxt4 = New System.Windows.Forms.TextBox()
         Me.lstxt5 = New System.Windows.Forms.TextBox()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.BackGroundChanger.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(12, 12)
+        Me.Button1.Location = New System.Drawing.Point(226, 597)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(94, 23)
         Me.Button1.TabIndex = 1
@@ -386,7 +387,7 @@ Partial Class Form1
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(693, 12)
+        Me.Button2.Location = New System.Drawing.Point(219, 626)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 7
@@ -449,14 +450,24 @@ Partial Class Form1
         Me.lstxt5.TabIndex = 10
         Me.lstxt5.Visible = False
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(189, 597)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(31, 23)
+        Me.Button3.TabIndex = 11
+        Me.Button3.Text = "[X]"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.DimGray
+        Me.BackColor = System.Drawing.Color.Lime
         Me.BackgroundImage = Global.Stats_Editor.My.Resources.Resources.airborneelite_CustomImg_blue
         Me.ClientSize = New System.Drawing.Size(780, 727)
         Me.ContextMenuStrip = Me.BackGroundChanger
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.lstxt5)
         Me.Controls.Add(Me.lstxt4)
         Me.Controls.Add(Me.lstxt3)
@@ -490,11 +501,12 @@ Partial Class Form1
         Me.Controls.Add(Me.LifeL)
         Me.Controls.Add(Me.MoveL)
         Me.Controls.Add(Me.Button1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Stats Editor"
+        Me.TransparencyKey = System.Drawing.Color.Lime
         Me.BackGroundChanger.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -540,5 +552,6 @@ Partial Class Form1
     Friend WithEvents lstxt3 As System.Windows.Forms.TextBox
     Friend WithEvents lstxt4 As System.Windows.Forms.TextBox
     Friend WithEvents lstxt5 As System.Windows.Forms.TextBox
+    Friend WithEvents Button3 As System.Windows.Forms.Button
 
 End Class

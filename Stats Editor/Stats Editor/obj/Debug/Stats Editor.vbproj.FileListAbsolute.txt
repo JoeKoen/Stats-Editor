@@ -13,3 +13,4 @@ C:\Users\Cyber\Documents\GitHub\Stats-Editor\Stats Editor\Stats Editor\bin\Debug
 C:\Users\Cyber\Documents\GitHub\Stats-Editor\Stats Editor\Stats Editor\bin\Debug\Stats Editor.application
 C:\Users\Cyber\Documents\GitHub\Stats-Editor\Stats Editor\Stats Editor\obj\Debug\Stats Editor.exe.manifest
 C:\Users\Cyber\Documents\GitHub\Stats-Editor\Stats Editor\Stats Editor\obj\Debug\Stats Editor.application
+C:\Users\Cyber\Documents\GitHub\Stats-Editor\Stats Editor\Stats Editor\obj\Debug\Stats Editor.g.resources

@@ -15,6 +15,38 @@ StatsEditor
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
+</member><member name="P:Stats_Editor.My.Resources.Resources.airborneelite_CustomImg_blue">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Stats_Editor.My.Resources.Resources.airborneelite_CustomImg_brown">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Stats_Editor.My.Resources.Resources.airborneelite_CustomImg_gold">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Stats_Editor.My.Resources.Resources.airborneelite_CustomImg_green">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Stats_Editor.My.Resources.Resources.airborneelite_CustomImg_lightblue">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Stats_Editor.My.Resources.Resources.airborneelite_CustomImg_red">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Stats_Editor.My.Resources.Resources.index">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Stats_Editor.My.Resources.Resources.index_Tl6_icon">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+</summary>
 </member><member name="T:Stats_Editor.My.Resources.Resources">
 	<summary>
   A strongly-typed resource class, for looking up localized strings, etc.

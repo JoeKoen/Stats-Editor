@@ -21,18 +21,20 @@
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
+    <UpdateRequired>true</UpdateRequired>
     <MapFileExtensions>false</MapFileExtensions>
     <InstallUrl>http://mydev.center/apps/statseditor/</InstallUrl>
     <UpdateUrl>http://mydev.center/apps/statseditor/</UpdateUrl>
     <ProductName>Stats Editor</ProductName>
     <PublisherName>Cyber%27s Custom Apps</PublisherName>
     <SuiteName>Stats Editor Alpha</SuiteName>
+    <MinimumRequiredVersion>1.0.0.22</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.php</WebPage>
-    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationRevision>23</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -83,6 +85,9 @@
   <PropertyGroup>
     <SignManifests>true</SignManifests>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\index_Tl6_icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -114,6 +119,9 @@
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="iPanel.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -172,6 +180,20 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\airborneelite_CustomImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Reader.txt" />
+    <None Include="Resources\index_Tl6_icon.ico" />
+    <None Include="Resources\index.png" />
+    <None Include="Resources\airborneelite_CustomImg_gold.png" />
+    <None Include="Resources\airborneelite_CustomImg_red.png" />
+    <None Include="Resources\airborneelite_CustomImg_lightblue.png" />
+    <None Include="Resources\airborneelite_CustomImg_green.png" />
+    <None Include="Resources\airborneelite_CustomImg_brown.png" />
+    <None Include="Resources\airborneelite_CustomImg_blue.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

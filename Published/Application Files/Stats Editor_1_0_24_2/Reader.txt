@@ -1,9 +1,0 @@
-﻿Dim reader As New System.IO.StreamReader(OpenFileDialog1.FileName)
-Dim abc1, abc2 as string
-
-abc1 = reader.ReadLine()
-abc2 = reader.ReadLine()
-reader.Close()
-
-textbox1.text = abc1
-textbox2.text = abc2

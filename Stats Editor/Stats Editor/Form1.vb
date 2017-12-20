@@ -1,4 +1,12 @@
-﻿Public Class Form1
+﻿Imports System.Text
+
+Public Class Form1
+    'Public Sub CheckAssociation()
+    '    My.Computer.Registry.ClassesRoot.CreateSubKey(".sef").SetValue("", "Stats Editor File", Microsoft.Win32.RegistryValueKind.String)
+    '    My.Computer.Registry.ClassesRoot.CreateSubKey("StatsEditorFile\shell\open\command").SetValue("", Application.ExecutablePath & " ""%1"" ", Microsoft.Win32.RegistryValueKind.String)
+    '    My.Computer.Registry.ClassesRoot.CreateSubKey("StatsEditorFile\DefaultIcon").SetValue("", Application.StartupPath & "\index_Tl6_icon.ico")
+    'End Sub
+
     ' Dim Area
     Dim life As Integer
     Dim moves As Integer
@@ -8,22 +16,49 @@
     Dim drag As Boolean
     Dim mousex As Integer
     Dim mousey As Integer
+    Dim FName As String
+    Dim dfbg As String
 
     ' -----------
-    Private Sub Form1_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseDown
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'CheckAssociation()
+
+        'Dim file As String = Command$()
+        'If Not file = "" Then
+        '    file = Replace(file, Chr(34), "")
+        '    'RichTextBox1.LoadFile(file)
+        'End If
+
+
+
+        'MessageBox.Show(file)
+
+
+        life = 0
+        moves = 0
+        range = 0
+        attack = 0
+        Defense = 0
+        dfbg = "blue"
+
+    End Sub
+
+    Private Sub Form1_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseDown, fsi1.MouseDown
         drag = True
         mousex = Windows.Forms.Cursor.Position.X - Me.Left
         mousey = Windows.Forms.Cursor.Position.Y - Me.Top
     End Sub
-    Private Sub Form1_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseMove
+    Private Sub Form1_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseMove, fsi1.MouseMove
         If drag Then
             Me.Top = Windows.Forms.Cursor.Position.Y - mousey
             Me.Left = Windows.Forms.Cursor.Position.X - mousex
         End If
     End Sub
-    Private Sub Form1_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseUp
+    Private Sub Form1_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseUp, fsi1.MouseUp
         drag = False
     End Sub
+
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -32,26 +67,38 @@
     End Sub
     Private Sub LightBlueToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LightBlueToolStripMenuItem.Click
         Me.BackgroundImage = My.Resources.airborneelite_CustomImg_lightblue
+        fsi1.Image = My.Resources.airborneelite_CustomImg_lightblue
+        dfbg = "lblue"
     End Sub
 
     Private Sub BlueToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BlueToolStripMenuItem.Click
         Me.BackgroundImage = My.Resources.airborneelite_CustomImg_blue
+        fsi1.Image = My.Resources.airborneelite_CustomImg_blue
+        dfbg = "blue"
     End Sub
 
     Private Sub BrownToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BrownToolStripMenuItem.Click
         Me.BackgroundImage = My.Resources.airborneelite_CustomImg_brown
+        fsi1.Image = My.Resources.airborneelite_CustomImg_brown
+        dfbg = "brown"
     End Sub
 
     Private Sub GoldToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GoldToolStripMenuItem.Click
         Me.BackgroundImage = My.Resources.airborneelite_CustomImg_gold
+        fsi1.Image = My.Resources.airborneelite_CustomImg_gold
+        dfbg = "gold"
     End Sub
 
     Private Sub GreenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GreenToolStripMenuItem.Click
         Me.BackgroundImage = My.Resources.airborneelite_CustomImg_green
+        fsi1.Image = My.Resources.airborneelite_CustomImg_green
+        dfbg = "green"
     End Sub
 
     Private Sub RedToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RedToolStripMenuItem.Click
         Me.BackgroundImage = My.Resources.airborneelite_CustomImg_red
+        fsi1.Image = My.Resources.airborneelite_CustomImg_red
+        dfbg = "red"
     End Sub
 
     Private Sub Label12_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles LifeL.MouseDoubleClick
@@ -104,13 +151,6 @@
         End If
     End Sub
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        life = 0
-        moves = 0
-        range = 0
-        attack = 0
-        Defense = 0
-    End Sub
 
     Private Sub LifePlus_Click(sender As Object, e As EventArgs) Handles LifePlus.Click
         life = life + 1
@@ -173,11 +213,11 @@
     End Sub
 
     Private Sub topheadertxt_TextChanged(sender As Object, e As EventArgs) Handles topheadertxt.TextChanged
-        TopHeaderL.Text = topheadertxt.Text.ToString
-        topheadertxt.Text = TopHeaderL.Text.ToString
+        NameStat.Text = topheadertxt.Text.ToString
+        topheadertxt.Text = NameStat.Text.ToString
     End Sub
 
-    Private Sub TopHeaderL_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles TopHeaderL.MouseDoubleClick
+    Private Sub TopHeaderL_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles NameStat.MouseDoubleClick
         If topheadertxt.Visible = 0 Then
             topheadertxt.Visible = 1
         Else
@@ -269,5 +309,139 @@
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Me.Close()
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles SaveStat.Click
+
+
+        Dim sb As StringBuilder = New StringBuilder()
+
+        sb.Append(NameStat.Text & vbNewLine)
+        sb.Append(LifeL.Text & vbNewLine)
+        sb.Append(MoveL.Text & vbNewLine)
+        sb.Append(RangeL.Text & vbNewLine)
+        sb.Append(AttackL.Text & vbNewLine)
+        sb.Append(DefenseL.Text & vbNewLine)
+        sb.Append(bottomtopheaderL.Text & vbNewLine)
+        sb.Append(lstxtL1.Text & vbNewLine)
+        sb.Append(lstxtL2.Text & vbNewLine)
+        sb.Append(lstxtL3.Text & vbNewLine)
+        sb.Append(lstxtL4.Text & vbNewLine)
+        sb.Append(lstxtL5.Text & vbNewLine)
+        sb.Append(dfbg.ToString & vbNewLine)
+        If (Not System.IO.Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) & "\StatEditor")) Then
+            System.IO.Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) & "\StatEditor")
+            System.IO.Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) & "\StatEditor\bio_files")
+        End If
+        If (Not System.IO.Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) & "\StatEditor\bio_files")) Then
+            System.IO.Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) & "\StatEditor\bio_files")
+        End If
+
+
+
+        System.IO.File.WriteAllText(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) & "\StatEditor\" & NameStat.Text & ".sef", sb.ToString())
+        biotxt.SaveFile(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) & "\StatEditor\bio_files\" & NameStat.Text & "_bio.sef")
+
+
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles OpenStat.Click
+        Try
+            Dim OpenF As New OpenFileDialog
+            OpenF.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) & "\StatEditor\"
+            OpenF.Filter = "Stat Files (*.sef)|*.sef"
+            OpenF.ShowDialog()
+            OpenF.Title = "Open a Stat Card"
+            OpenF.Multiselect = False
+            FName = OpenF.FileName
+
+
+            If FName = "" Then
+                MessageBox.Show("Why did you even click open if" & vbNewLine &
+                                "you were not going to even open a file.")
+            Else
+                Try
+                    Dim reader As New System.IO.StreamReader(FName)
+                    Dim NameCard, life1, move1, range1, attack1, defense1, lstxtL11, lstxtL22, lstxtL33, lstxtL44, lstxtL55, dfb As String
+
+                    NameCard = reader.ReadLine()
+                    life1 = reader.ReadLine()
+                    move1 = reader.ReadLine()
+                    range1 = reader.ReadLine()
+                    attack1 = reader.ReadLine()
+                    defense1 = reader.ReadLine()
+                    bottomtopheaderL.Text = reader.ReadLine()
+                    lstxtL11 = reader.ReadLine()
+                    lstxtL22 = reader.ReadLine()
+                    lstxtL33 = reader.ReadLine()
+                    lstxtL44 = reader.ReadLine()
+                    lstxtL55 = reader.ReadLine()
+                    dfb = reader.ReadLine()
+                    reader.Close()
+
+                    NameStat.Text = NameCard
+                    LifeL.Text = life1
+                    MoveL.Text = move1
+                    RangeL.Text = range1
+                    AttackL.Text = attack1
+                    DefenseL.Text = defense1
+                    lstxtL1.Text = lstxtL11
+                    lstxtL2.Text = lstxtL22
+                    lstxtL3.Text = lstxtL33
+                    lstxtL4.Text = lstxtL44
+                    lstxtL5.Text = lstxtL55
+
+                    'BG Loader -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+                    If dfb = "lblue" Then
+                        Me.BackgroundImage = My.Resources.airborneelite_CustomImg_lightblue
+                        fsi1.Image = My.Resources.airborneelite_CustomImg_lightblue
+                    End If
+                    If dfb = "blue" Then
+                        Me.BackgroundImage = My.Resources.airborneelite_CustomImg_blue
+                        fsi1.Image = My.Resources.airborneelite_CustomImg_blue
+                    End If
+                    If dfb = "brown" Then
+                        Me.BackgroundImage = My.Resources.airborneelite_CustomImg_brown
+                        fsi1.Image = My.Resources.airborneelite_CustomImg_brown
+                    End If
+                    If dfb = "gold" Then
+                        Me.BackgroundImage = My.Resources.airborneelite_CustomImg_gold
+                        fsi1.Image = My.Resources.airborneelite_CustomImg_gold
+                    End If
+                    If dfb = "green" Then
+                        Me.BackgroundImage = My.Resources.airborneelite_CustomImg_green
+                        fsi1.Image = My.Resources.airborneelite_CustomImg_green
+                    End If
+                    If dfb = "red" Then
+                        Me.BackgroundImage = My.Resources.airborneelite_CustomImg_red
+                        fsi1.Image = My.Resources.airborneelite_CustomImg_red
+                    End If
+
+
+
+                    ' =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+                    biotxt.LoadFile(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) & "\StatEditor\bio_files\" & NameCard & "_bio.sef")
+
+
+                    life = life1
+                    moves = move1
+                    range = range1
+                    attack = attack1
+                    Defense = defense1
+                Catch ex As Exception
+                    MessageBox.Show("Only you would figure out how to break the program. GG Mr.Eagle.", "GG", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                End Try
+            End If
+        Catch ex As Exception
+
+            MessageBox.Show("Only you would figure out how to break the program. GG Mr.Eagle.", "GG", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        End Try
+
+
+
+
+
     End Sub
 End Class

@@ -35,7 +35,7 @@ Partial Class Form1
         Me.lstxtL3 = New System.Windows.Forms.Label()
         Me.lstxtL4 = New System.Windows.Forms.Label()
         Me.lstxtL5 = New System.Windows.Forms.Label()
-        Me.TopHeaderL = New System.Windows.Forms.Label()
+        Me.NameStat = New System.Windows.Forms.Label()
         Me.bottomtopheaderL = New System.Windows.Forms.Label()
         Me.LifeL = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -65,7 +65,11 @@ Partial Class Form1
         Me.lstxt4 = New System.Windows.Forms.TextBox()
         Me.lstxt5 = New System.Windows.Forms.TextBox()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.SaveStat = New System.Windows.Forms.Button()
+        Me.fsi1 = New System.Windows.Forms.PictureBox()
+        Me.OpenStat = New System.Windows.Forms.Button()
         Me.BackGroundChanger.SuspendLayout()
+        CType(Me.fsi1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
@@ -130,7 +134,6 @@ Partial Class Form1
         Me.biotxt.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.biotxt.Location = New System.Drawing.Point(185, 187)
         Me.biotxt.Name = "biotxt"
-        Me.biotxt.ReadOnly = True
         Me.biotxt.Size = New System.Drawing.Size(176, 404)
         Me.biotxt.TabIndex = 3
         Me.biotxt.Text = "You will be able to write your own text here!"
@@ -195,17 +198,17 @@ Partial Class Form1
         Me.lstxtL5.Text = "Edit Me"
         Me.lstxtL5.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
-        'TopHeaderL
+        'NameStat
         '
-        Me.TopHeaderL.BackColor = System.Drawing.Color.Transparent
-        Me.TopHeaderL.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Bold)
-        Me.TopHeaderL.ForeColor = System.Drawing.Color.White
-        Me.TopHeaderL.Location = New System.Drawing.Point(184, 112)
-        Me.TopHeaderL.Name = "TopHeaderL"
-        Me.TopHeaderL.Size = New System.Drawing.Size(171, 52)
-        Me.TopHeaderL.TabIndex = 4
-        Me.TopHeaderL.Text = "Edit Me"
-        Me.TopHeaderL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.NameStat.BackColor = System.Drawing.Color.Transparent
+        Me.NameStat.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.NameStat.ForeColor = System.Drawing.Color.White
+        Me.NameStat.Location = New System.Drawing.Point(184, 112)
+        Me.NameStat.Name = "NameStat"
+        Me.NameStat.Size = New System.Drawing.Size(171, 52)
+        Me.NameStat.TabIndex = 4
+        Me.NameStat.Text = "Edit Me"
+        Me.NameStat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'bottomtopheaderL
         '
@@ -387,7 +390,7 @@ Partial Class Form1
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(219, 626)
+        Me.Button2.Location = New System.Drawing.Point(185, 626)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 7
@@ -459,6 +462,35 @@ Partial Class Form1
         Me.Button3.Text = "[X]"
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'SaveStat
+        '
+        Me.SaveStat.Location = New System.Drawing.Point(266, 626)
+        Me.SaveStat.Name = "SaveStat"
+        Me.SaveStat.Size = New System.Drawing.Size(75, 23)
+        Me.SaveStat.TabIndex = 12
+        Me.SaveStat.Text = "Save Stats"
+        Me.SaveStat.UseVisualStyleBackColor = True
+        '
+        'fsi1
+        '
+        Me.fsi1.BackColor = System.Drawing.Color.Transparent
+        Me.fsi1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.fsi1.Image = Global.Stats_Editor.My.Resources.Resources.airborneelite_CustomImg_blue
+        Me.fsi1.Location = New System.Drawing.Point(0, 0)
+        Me.fsi1.Name = "fsi1"
+        Me.fsi1.Size = New System.Drawing.Size(780, 727)
+        Me.fsi1.TabIndex = 13
+        Me.fsi1.TabStop = False
+        '
+        'OpenStat
+        '
+        Me.OpenStat.Location = New System.Drawing.Point(213, 655)
+        Me.OpenStat.Name = "OpenStat"
+        Me.OpenStat.Size = New System.Drawing.Size(107, 23)
+        Me.OpenStat.TabIndex = 14
+        Me.OpenStat.Text = "Open Stat Card"
+        Me.OpenStat.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -467,6 +499,8 @@ Partial Class Form1
         Me.BackgroundImage = Global.Stats_Editor.My.Resources.Resources.airborneelite_CustomImg_blue
         Me.ClientSize = New System.Drawing.Size(780, 727)
         Me.ContextMenuStrip = Me.BackGroundChanger
+        Me.Controls.Add(Me.OpenStat)
+        Me.Controls.Add(Me.SaveStat)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.lstxt5)
         Me.Controls.Add(Me.lstxt4)
@@ -487,7 +521,7 @@ Partial Class Form1
         Me.Controls.Add(Me.LifeMinus)
         Me.Controls.Add(Me.LifePlus)
         Me.Controls.Add(Me.bottomtopheaderL)
-        Me.Controls.Add(Me.TopHeaderL)
+        Me.Controls.Add(Me.NameStat)
         Me.Controls.Add(Me.lstxtL5)
         Me.Controls.Add(Me.lstxtL4)
         Me.Controls.Add(Me.lstxtL3)
@@ -501,6 +535,7 @@ Partial Class Form1
         Me.Controls.Add(Me.LifeL)
         Me.Controls.Add(Me.MoveL)
         Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.fsi1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
@@ -508,6 +543,7 @@ Partial Class Form1
         Me.Text = "Stats Editor"
         Me.TransparencyKey = System.Drawing.Color.Lime
         Me.BackGroundChanger.ResumeLayout(False)
+        CType(Me.fsi1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -523,7 +559,7 @@ Partial Class Form1
     Friend WithEvents lstxtL3 As System.Windows.Forms.Label
     Friend WithEvents lstxtL4 As System.Windows.Forms.Label
     Friend WithEvents lstxtL5 As System.Windows.Forms.Label
-    Friend WithEvents TopHeaderL As System.Windows.Forms.Label
+    Friend WithEvents NameStat As System.Windows.Forms.Label
     Friend WithEvents bottomtopheaderL As System.Windows.Forms.Label
     Friend WithEvents LifeL As System.Windows.Forms.Label
     Friend WithEvents Label13 As System.Windows.Forms.Label
@@ -553,5 +589,8 @@ Partial Class Form1
     Friend WithEvents lstxt4 As System.Windows.Forms.TextBox
     Friend WithEvents lstxt5 As System.Windows.Forms.TextBox
     Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents SaveStat As System.Windows.Forms.Button
+    Friend WithEvents fsi1 As System.Windows.Forms.PictureBox
+    Friend WithEvents OpenStat As System.Windows.Forms.Button
 
 End Class

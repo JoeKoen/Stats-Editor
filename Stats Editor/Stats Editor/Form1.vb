@@ -145,8 +145,101 @@
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         MessageBox.Show("How to use the features so far." & vbNewLine &
                         "* Double click the ""#"" for the ""+"" or ""-"" buttons and edit the numbers." & vbNewLine &
-                        "* Double click the ""#"" again to hide the ""+"" and ""-"" buttons." & vbNewLine &
-                        "* Right click the background to change the colours.",
+                        "   Double click the ""#"" again to hide the ""+"" and ""-"" buttons." & vbNewLine &
+                        "* Right click the background to change the colours." & vbNewLine &
+                        "* Double click the ""Edit Me"" place holders to edit the area." & vbNewLine &
+                        "   Double click the same text to hide the editor.",
                         "Help box")
+    End Sub
+
+    Private Sub topheadertxt_TextChanged(sender As Object, e As EventArgs) Handles topheadertxt.TextChanged
+        TopHeaderL.Text = topheadertxt.Text.ToString
+        topheadertxt.Text = TopHeaderL.Text.ToString
+    End Sub
+
+    Private Sub TopHeaderL_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles TopHeaderL.MouseDoubleClick
+        If topheadertxt.Visible = 0 Then
+            topheadertxt.Visible = 1
+        Else
+            topheadertxt.Visible = 0
+        End If
+    End Sub
+
+    Private Sub bottomtopheaderL_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles bottomtopheaderL.MouseDoubleClick
+        If bottomtopheadertxt.Visible = 0 Then
+            bottomtopheadertxt.Visible = 1
+        Else
+            bottomtopheadertxt.Visible = 0
+        End If
+    End Sub
+
+    Private Sub bottomtopheadertxt_TextChanged(sender As Object, e As EventArgs) Handles bottomtopheadertxt.TextChanged
+        bottomtopheaderL.Text = bottomtopheadertxt.Text.ToString
+        bottomtopheadertxt.Text = bottomtopheaderL.Text.ToString
+    End Sub
+
+    Private Sub lstxtL1_MouseDoubleClick(sender As Object, e As EventArgs) Handles lstxtL1.MouseDoubleClick
+        If lstxt1.Visible = 0 Then
+            lstxt1.Visible = 1
+        Else
+            lstxt1.Visible = 0
+        End If
+    End Sub
+
+    Private Sub lstxtL2_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles lstxtL2.MouseDoubleClick
+        If lstxt2.Visible = 0 Then
+            lstxt2.Visible = 1
+        Else
+            lstxt2.Visible = 0
+        End If
+    End Sub
+
+    Private Sub lstxtL3_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles lstxtL3.MouseDoubleClick
+        If lstxt3.Visible = 0 Then
+            lstxt3.Visible = 1
+        Else
+            lstxt3.Visible = 0
+        End If
+    End Sub
+
+    Private Sub lstxtL4_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles lstxtL4.MouseDoubleClick
+        If lstxt4.Visible = 0 Then
+            lstxt4.Visible = 1
+        Else
+            lstxt4.Visible = 0
+        End If
+    End Sub
+
+    Private Sub lstxtL5_MouseDoubleClick(sender As Object, e As EventArgs) Handles lstxtL5.MouseDoubleClick
+        If lstxt5.Visible = 0 Then
+            lstxt5.Visible = 1
+        Else
+            lstxt5.Visible = 0
+        End If
+    End Sub
+
+    Private Sub lstxt1_TextChanged(sender As Object, e As EventArgs) Handles lstxt1.TextChanged
+        lstxtL1.Text = lstxt1.Text.ToString
+        lstxt1.Text = lstxtL1.Text.ToString
+    End Sub
+
+    Private Sub lstxt2_TextChanged(sender As Object, e As EventArgs) Handles lstxt2.TextChanged
+        lstxtL2.Text = lstxt2.Text.ToString
+        lstxt2.Text = lstxtL2.Text.ToString
+    End Sub
+
+    Private Sub lstxt3_TextChanged(sender As Object, e As EventArgs) Handles lstxt3.TextChanged
+        lstxtL3.Text = lstxt3.Text.ToString
+        lstxt3.Text = lstxtL3.Text.ToString
+    End Sub
+
+    Private Sub lstxt4_TextChanged(sender As Object, e As EventArgs) Handles lstxt4.TextChanged
+        lstxtL4.Text = lstxt4.Text.ToString
+        lstxt4.Text = lstxtL4.Text.ToString
+    End Sub
+
+    Private Sub lstxt5_TextChanged(sender As Object, e As EventArgs) Handles lstxt5.TextChanged
+        lstxtL5.Text = lstxt5.Text.ToString
+        lstxt5.Text = lstxtL5.Text.ToString
     End Sub
 End Class

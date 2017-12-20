@@ -28,11 +28,11 @@
     <ProductName>Stats Editor</ProductName>
     <PublisherName>Cyber%27s Custom Apps</PublisherName>
     <SuiteName>Stats Editor Alpha</SuiteName>
-    <MinimumRequiredVersion>1.0.0.22</MinimumRequiredVersion>
+    <MinimumRequiredVersion>1.0.23.1</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.php</WebPage>
-    <ApplicationRevision>23</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.23.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
